@@ -1,0 +1,23 @@
+{% extends 'layout.html' %}
+
+
+
+{% block body %}
+
+  <h1>Prediction for this patient is:
+
+    {% if prediction == '0' %}
+
+      Non Diabetic (x_x)
+
+    {% else %}
+
+      Diabetes Is Predicted :)
+
+    {% endif %}
+
+    <h1>
+
+    Now Check for Heart Disease
+
+{% endblock %}
