@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset = "UTF-8">
+        <meta name="viewport" content="width=device-width, intial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <title>Average RHR, Cholesterol, and MHR</title>
+    </head>
+<body>
+    <div class="container">
+        <canvas id="myChart"></canvas>
+    </div>
+<script>
+    let myChart = document.getElementById('myChart').getContext('2d');
+
+    let heart_males = new Chart(myChart, {
+        type: 'bar', //we can have bar, horizontalbar, pie, line, doughnut, radar, polarArea
+        data: {
+            labels:["Resting Blood Pressure", "Cholestertol", "Max Heart Rate"],
+            datasets:[{
+                label:'Males (-) <40',
+                data:[121, 229, 152],
+                backgroundColor: ['rgba(0,0,200,0.2', 'rgba(0,0,200,0.2', 'rgba(0,0,200,0.2'],
+                borderWidth:1.5,
+                hoverBackgroundColor: "black",
+                borderColor:"blue",
+                hoverBorderWidth: 1.5,
+                hoverBorderColor: "black"
+            },
+            { label:'Males (-) 40-49',
+                data:[123, 233, 143],
+                backgroundColor: ['rgba(224, 0, 0, 0.2', 'rgba(224, 0, 0, 0.2', 'rgba(224, 0, 0, 0.2'],
+                borderWidth:1.5,
+                borderColor:"blue",
+                hoverBackgroundColor: "black",
+                hoverBorderWidth: 1.5,
+                hoverBorderColor: "black"
+
+            },
+            {label:'Males (-) 50-59',
+                data:[134, 250, 137],
+                backgroundColor: ['rgba(0, 222, 22, 0.2', 'rgba(0, 222, 22, 0.2', 'rgba(0, 222, 22, 0.2'],
+                borderWidth:1.5,
+                borderColor:"blue",
+                hoverBackgroundColor: "black",
+                hoverBorderWidth: 1.5,
+                hoverBorderColor: "black"
+
+            },
+            {label:'Males (-) 60-69',
+                data:[133, 248, 137],
+                backgroundColor: ['rgba(231, 170, 36, 0.6)', 'rgba(231, 170, 36, 0.6)', 'rgba(231, 170, 36, 0.6)'],
+                borderWidth:1.5,
+                borderColor:"blue",
+                hoverBackgroundColor: "black",
+                hoverBorderWidth: 1.5,
+                hoverBorderColor: "black"
+
+            },
+            {label:'Males (-) 70-79',
+                data:[139, 265, 125],
+                backgroundColor: ['rgba(222, 61, 138, 0.6)', 'rgba(222, 61, 138, 0.6)', 'rgba(222, 61, 138, 0.6)'],
+                borderWidth:1.5,
+                borderColor:"blue",
+                hoverBackgroundColor: "black",
+                hoverBorderWidth: 1.5,
+                hoverBorderColor: "black"
+
+            },
+            {label:'Males (+) <40',
+                data:[131, 210, 181],
+                backgroundColor: ['rgba(0,0,200,0.2', 'rgba(0,0,200,0.2', 'rgba(0,0,200,0.2'],
+                borderWidth:1.5,
+                borderColor:"blue",
+                hoverBackgroundColor: "black",
+                hoverBorderWidth: 1.5,
+                hoverBorderColor: "black"
+
+            },
+            {label:'Males (+) 40-49',
+                data:[125, 235, 170],
+                backgroundColor: ['rgba(224, 0, 0, 0.2', 'rgba(224, 0, 0, 0.2', 'rgba(224, 0, 0, 0.2'],
+                borderWidth:1.5,
+                borderColor:"blue",
+                hoverBackgroundColor: "black",
+                hoverBorderWidth: 1.5,
+                hoverBorderColor: "black"
+
+            },
+            {label:'Males (+) 50-59',
+                data:[130, 228, 159],
+                backgroundColor: ['rgba(0, 222, 22, 0.2', 'rgba(0, 222, 22, 0.2', 'rgba(0, 222, 22, 0.2'],
+                borderWidth:1.5,
+                borderColor:"blue",
+                hoverBackgroundColor: "black",
+                hoverBorderWidth: 1.5,
+                hoverBorderColor: "black"
+
+            },
+            {label:'Males (+) 60-69',
+                data:[138, 236, 141],
+                backgroundColor: ['rgba(231, 170, 36, 0.6)', 'rgba(231, 170, 36, 0.6)', 'rgba(231, 170, 36, 0.6)'],
+                borderWidth:1.5,
+                borderColor:"blue",
+                hoverBackgroundColor: "black",
+                hoverBorderWidth: 1.5,
+                hoverBorderColor: "black"
+
+            },
+            {label:'Males (+) 70-79',
+                data:[156, 245, 143],
+                backgroundColor: ['rgba(222, 61, 138, 0.6)', 'rgba(222, 61, 138, 0.6)', 'rgba(222, 61, 138, 0.6)'],
+                borderWidth:1.5,
+                borderColor:"blue",
+                hoverBackgroundColor: "black",
+                hoverBorderWidth: 1.5,
+                hoverBorderColor: "black"
+
+            },]
+        },
+        options:{
+            title:{
+                display:true,
+                text:'Distribution of Average RBP, Cholesterol, and MHR (Male)',
+                fontSize:25   
+            },
+            legend:{
+                display:true,
+                position:'bottom',
+                labels:{
+                    fontColor:"teal"
+                }
+            },
+            layout:{
+                padding:{
+                    left:0,
+                    right:0,
+                    bottom:0,
+                    top:0
+                }
+            },
+            tooltips:{
+                enabled:true
+            }
+        }
+    });
+</script>
+
+
+</body>
+
+</html>

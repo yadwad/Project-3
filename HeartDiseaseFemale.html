@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset = "UTF-8">
+        <meta name="viewport" content="width=device-width, intial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <title>Average RHR, Cholesterol, and MHR</title>
+    </head>
+<body>
+    <div class="container">
+        <canvas id="myChart"></canvas>
+    </div>
+<script>
+    let myChart = document.getElementById('myChart').getContext('2d');
+
+    let heart_males = new Chart(myChart, {
+        type: 'bar', //we can have bar, horizontalbar, pie, line, doughnut, radar, polarArea
+        data: {
+            labels:["Resting Blood Pressure", "Cholestertol", "Max Heart Rate"],
+            datasets:[
+            { label:'Females (-) 40-49',
+                data:[132, 341, 136],
+                backgroundColor: ['rgba(224, 0, 0, 0.2', 'rgba(224, 0, 0, 0.2', 'rgba(224, 0, 0, 0.2'],
+                borderWidth:1.5,
+                borderColor:"blue",
+                hoverBackgroundColor: "black",
+                hoverBorderWidth: 1.5,
+                hoverBorderColor: "orange"
+
+            },
+            {label:'Females (-) 50-59',
+                data:[154, 279, 140],
+                backgroundColor: ['rgba(0, 222, 22, 0.2', 'rgba(0, 222, 22, 0.2', 'rgba(0, 222, 22, 0.2'],
+                borderWidth:1.5,
+                borderColor:"blue",
+                hoverBackgroundColor: "black",
+                hoverBorderWidth: 1.5,
+                hoverBorderColor: "yellow"
+
+            },
+            {label:'Females (-) 60-69',
+                data:[142, 269, 144],
+                backgroundColor: ['rgba(231, 170, 36, 0.6)', 'rgba(231, 170, 36, 0.6)', 'rgba(231, 170, 36, 0.6)'],
+                borderWidth:1.5,
+                borderColor:"blue",
+                hoverBackgroundColor: "black",
+                hoverBorderWidth: 1.5,
+                hoverBorderColor: "green"
+
+            },
+            {label:'Females (+) <40',
+                data:[124, 205, 174],
+                backgroundColor: ['rgba(0,0,200,0.2', 'rgba(0,0,200,0.2', 'rgba(0,0,200,0.2'],
+                borderWidth:1.5,
+                borderColor:"black",
+                hoverBackgroundColor: "black",
+                hoverBorderWidth: 1.5,
+                hoverBorderColor: "red"
+
+            },
+            {label:'Females (+) 40-49',
+                data:[128, 229, 160],
+                backgroundColor: ['rgba(224, 0, 0, 0.2', 'rgba(224, 0, 0, 0.2', 'rgba(224, 0, 0, 0.2'],
+                borderWidth:1.5,
+                borderColor:"blue",
+                hoverBackgroundColor: "black",
+                hoverBorderWidth: 1.5,
+                hoverBorderColor: "orange"
+
+            },
+            {label:'Females (+) 50-59',
+                data:[137, 266, 155],
+                backgroundColor: ['rgba(0, 222, 22, 0.2', 'rgba(0, 222, 22, 0.2', 'rgba(0, 222, 22, 0.2'],
+                borderWidth:1.5,
+                borderColor:"blue",
+                hoverBackgroundColor: "black",
+                hoverBorderWidth: 1.5,
+                hoverBorderColor: "yellow"
+
+            },
+            {label:'Females (+) 60-69',
+                data:[137, 287, 149],
+                backgroundColor: ['rgba(231, 170, 36, 0.6)', 'rgba(231, 170, 36, 0.6)', 'rgba(231, 170, 36, 0.6)'],
+                borderWidth:1.5,
+                borderColor:"blue",
+                hoverBackgroundColor: "black",
+                hoverBorderWidth: 1.5,
+                hoverBorderColor: "green"
+
+            },
+            {label:'Females (+) 70-79',
+                data:[126, 233, 130],
+                backgroundColor: ['rgba(222, 61, 138, 0.6)', 'rgba(222, 61, 138, 0.6)', 'rgba(222, 61, 138, 0.6)'],
+                borderWidth:1.5,
+                borderColor:"blue",
+                hoverBackgroundColor: "black",
+                hoverBorderWidth: 1.5,
+                hoverBorderColor: "blue"
+
+            },]
+        },
+        options:{
+            title:{
+                display:true,
+                text:'Distribution of Average RBP, Cholesterol, and MHR (Female)',
+                fontSize:25   
+            },
+            legend:{
+                display:true,
+                position:'bottom',
+                labels:{
+                    fontColor:"teal"
+                }
+            },
+            layout:{
+                padding:{
+                    left:0,
+                    right:0,
+                    bottom:0,
+                    top:0
+                }
+            },
+            tooltips:{
+                enabled:true
+            }
+        }
+    });
+</script>
+
+
+</body>
+
+</html>
